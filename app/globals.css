@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'clashReg';
+    src: url('../public/ClashDisplay-Regular.ttf');
+}
+
+.clashReg {
+    font-family: 'clashReg';
+}   
+
+
+
+@font-face {
+    font-family: 'clashBold';
+    src: url('../public/ClashDisplay-Bold.ttf');
+} 
+
+.clashBold {
+    font-family: 'clashBold';
+}   
+
+@font-face {
+    font-family: 'mori';
+    src: url('../public/PPMori-Regular.otf');
+}
+
+.mori {
+    font-family: 'mori';
+}   
