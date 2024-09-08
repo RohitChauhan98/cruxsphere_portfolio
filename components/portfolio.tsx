@@ -34,7 +34,7 @@ export default function Portfolio(){
 
 
 
-    return <div className='relative mt-[50vh]'>
+    return <div className='relative mt-[20vh]'>
 
 {
         projects.map( (project, i) => {

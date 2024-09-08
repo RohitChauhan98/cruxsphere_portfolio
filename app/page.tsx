@@ -1,14 +1,22 @@
+'use client'
+
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
+import Loader from "@/components/loader";
 import Mobile from "@/components/mobile";
 import Portfolio from "@/components/portfolio";
+import GsapTimelineExample from "@/components/reactTime";
 import TechStack from "@/components/techStack";
-import Image from "next/image";
+import gsap from "gsap";
 
 export default function Home() {
+  
+
   return (
     <main className="mori">
-      <Hero />
+      {/* <GsapTimelineExample /> */}
+      <Loader/>
+      <Hero/>
       <Mobile />
       <TechStack/>
       <Portfolio />

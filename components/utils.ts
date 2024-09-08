@@ -2,7 +2,7 @@ import sync, { cancelSync } from "framesync";
 import { useEffect } from "react";
 import { createExpoIn, reversed } from "@popmotion/easing";
 
-import image1 from '../public/assets/image1.jpeg'
+import image1 from '../public/assets/giphy.webp'
 import image2 from '@/public/assets/image2.jpeg'
 import image3 from '@/public/assets/image3.jpeg'
 import image4 from '@/public/assets/image4.jpeg'
@@ -49,7 +49,7 @@ export const generateSize = () => ({
 
 // Instead of using images just use color placeholders.
 const placeholderColors: Set<any> = new Set();
-const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15];
+const images = [image1, image2, image3, image1, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15];
 for (let i = 0; i < 6; i++) {
   placeholderColors.add(images[i]);
 }

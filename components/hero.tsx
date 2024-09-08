@@ -47,10 +47,7 @@ const ImagePlaceholder = ({ url, position }: { url: any, position: any }) => {
       style={{ borderRadius: '10px', overflow: "hidden", ...style }}
       className="placeholder"
     >
-      <img className=""
-        src={url.src}
-        alt="dfg"
-      />
+      <iframe src="https://giphy.com/embed/sWFYgYFjHGugleQdO7" width="480" height="480" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
     </motion.div>
 
   );
@@ -61,6 +58,22 @@ const herotxt = [
 ];
 
 const Hero = ({ distanceThreshold = 140 }) => {
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  // Check window size
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 512); // 1024px is the lg breakpoint in Tailwind
+    };
+
+    // Initial check
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const letter1 = useRef(null);
   useGSAP(() => {
     gsap.from(".letters", {
@@ -111,20 +124,9 @@ const Hero = ({ distanceThreshold = 140 }) => {
   });
 
 
-  // useEffect(() => {
-  //   const tl = gsap.timeline({ repeat: 0 });
-  //   tl.from(letter1.current, {
-  //     duration: 0.5,
-  //     opacity: 1,
-  //     x: -70,
-  //     ease: "bounce.out",
-  //   })
-
-
-  // })
-
   useGSAP(() => {
-    gsap.to('.letter1', {
+    gsap.to('.letter1Lg', {
+      delay: 3,
       duration: 1,
       y: -225,
       rotateY: -360,
@@ -132,8 +134,8 @@ const Hero = ({ distanceThreshold = 140 }) => {
       ease: "back.out",
     })
 
-    gsap.from('.letter2', {
-      delay: 1,
+    gsap.from('.letter2Lg', {
+      delay: 4,
       duration: 0.6,
       opacity: 0,
       rotateY: -180,
@@ -141,8 +143,8 @@ const Hero = ({ distanceThreshold = 140 }) => {
       ease: "back.out"
     })
 
-    gsap.from('.letter3', {
-      delay: 1.6,
+    gsap.from('.letter3Lg', {
+      delay: 4.6,
       duration: 0.8,
       x: -100,
       opacity: 0,
@@ -150,8 +152,8 @@ const Hero = ({ distanceThreshold = 140 }) => {
       ease: "power2.out",
     })
 
-    gsap.from('.letter4', {
-      delay: 2.2,
+    gsap.from('.letter4Lg', {
+      delay: 5.2,
       duration: 0.8,
       y: 100,
       scale: 0.5,
@@ -160,14 +162,16 @@ const Hero = ({ distanceThreshold = 140 }) => {
       ease: "power4.out",
     })
 
-    gsap.from('.letter5', {
+    gsap.from('.letter5Lg', {
+      delay: 3,
       duration: 1.5,
       scaleX: 2,
       scaleY: 0.5,
       ease: "elastic.out(1, 0.75)",
     })
 
-    gsap.from('.letter6', {
+    gsap.from('.letter6Lg', {
+      delay: 3,
       duration: 1.5,
       rotationY: 360,
       transformPerspective: 800,
@@ -176,9 +180,75 @@ const Hero = ({ distanceThreshold = 140 }) => {
       ease: "power3.inOut",
     })
 
-    gsap.from('.letter', {
+    gsap.to('.letterLg', {
+      delay: 3,
       duration: 0.5,
-      y: 200,
+      y: '-225',
+      stagger: 0.05,
+    })
+
+  });
+
+  useGSAP(() => {
+    gsap.to('.letter1Sm', {
+      delay: 3,
+      duration: 1,
+      y: -45,
+      rotateY: -360,
+      transformOrigin: "50% 50%",
+      ease: "back.out",
+    })
+
+    gsap.from('.letter2Sm', {
+      delay: 4,
+      duration: 0.6,
+      opacity: 0,
+      rotateY: -180,
+      transformOrigin: "50% 50%",
+      ease: "back.out"
+    })
+
+    gsap.from('.letter3Sm', {
+      delay: 4.6,
+      duration: 0.8,
+      x: -100,
+      opacity: 0,
+      scale: 0.9,
+      ease: "power2.out",
+    })
+
+    gsap.from('.letter4Sm', {
+      delay: 4,
+      duration: 0.8,
+      y: 100,
+      scale: 0.5,
+      rotation: 360,
+      opacity: 0,
+      ease: "power4.out",
+    })
+
+    gsap.from('.letter5Sm', {
+      delay: 3,
+      duration: 1.5,
+      scaleX: 2,
+      scaleY: 0.5,
+      ease: "elastic.out(1, 0.75)",
+    })
+
+    gsap.from('.letter6Sm', {
+      delay: 3,
+      duration: 1.5,
+      rotationY: 360,
+      transformPerspective: 800,
+      transformOrigin: "50% 50%",
+      opacity: 0,
+      ease: "power3.inOut",
+    })
+
+    gsap.to('.letterSm', {
+      delay: 3,
+      duration: 0.5,
+      y: '-60',
       stagger: 0.05,
     })
 
@@ -189,7 +259,7 @@ const Hero = ({ distanceThreshold = 140 }) => {
 
   return (
     <div
-      className=" h-[100vh] w-[100vw] bg-[#151515] text-white"
+      className="flex flex-col h-[100vh] w-[100vw] bg-[#151515] text-white"
       onMouseMove={e => (mouseInfo.now = { x: e.pageX, y: e.pageY })}
     >
       {colors.map((color, i) => (
@@ -208,62 +278,40 @@ const Hero = ({ distanceThreshold = 140 }) => {
           </ul>
         </div>
       </nav>
-      {/* <div className="h-[150px] overflow-hidden absolute top-[40%] left-[50%] text-[100px] flex  -translate-x-1/2 -translate-y-1/2">
-        <div className="letter1 inline-block">
-          <p className="">B</p>
-          <p className="">C</p>
-        </div>
-        <div>
-          <span className="mx-2 relative top-0 inline-block overflow-hidden"><p className="letter2">R</p></span>
-          <span className="mx-2 inline-block overflow-hidden"><p className="letter3">U</p></span>
-          <span className="mx-2 inline-block overflow-hidden"><p className="letter4">X</p></span>
-        </div>
-      </div> */}
-      {/* <div className="absolute top-[60%] text-[150px] -translate-y-1/2 font-bold">
-        <p className="leading-[120px] ml-[80px]">Development</p>
-        <p className="ml-[700px]">Company</p>
-      </div> */}
-      <div className="absolute top-[50%] -translate-y-1/2">
-        <div className="ml-[50px] h-[200px] text-[150px] flex overflow-hidden font-bold">
+      <div className="relative top-[40%] left-[10%] -translate-y-1/2 w-fit">
+        <div className="h-[60px] lg:h-[200px] text-[40px] md:text-[6vw] lg:text-[150px] flex overflow-hidden font-bold w-fit">
           <div>
-            <span className="mx-2 relative top-0 inline-block overflow-hidden"><p className="letter2">D</p></span>
-            <span className="mx-2 inline-block overflow-hidden"><p className="letter3">e</p></span>
-            <span className="mx-2 inline-block overflow-hidden"><p className="letter5">v</p></span>
-            <span className="mx-2 inline-block overflow-hidden"><p className="letter2">e</p></span>
-            <span className="mx-2 inline-block overflow-hidden"><p className="letter6">l</p></span>
-            <span className="mx-2 inline-block overflow-hidden"><p className="letter5">o</p></span>
-            <span className="mx-2 inline-block overflow-hidden"><p className="letter4">p</p></span>
-            <span className="mx-2 inline-block overflow-hidden"><p className="letter2">m</p></span>
-            <span className="mx-2 inline-block overflow-hidden"><p className="letter3">e</p></span>
-            <span className="mx-2 inline-block overflow-hidden"><p className="letter6">n</p></span>
+            <span className="mx-1 md:mx-2 relative top-0 inline-block overflow-hidden"><p className="letter2Sm md:letter2Lg">D</p></span>
+            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter3Sm md:letter3Lg">e</p></span>
+            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter5Sm md:letter5Lg">v</p></span>
+            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter2Sm md:letter2Lg">e</p></span>
+            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter6Sm md:letter6Lg">l</p></span>
+            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter5Sm md:letter5Lg">o</p></span>
+            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter4Sm md:letter4Lg">p</p></span>
+            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter2Sm md:letter2Lg">m</p></span>
+            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter3Sm md:letter3Lg">e</p></span>
+            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter6Sm md:letter6Lg">n</p></span>
           </div>
-          <div className="letter1 inline-block">
+          <div className="letterLg inline-block">
             <p className="">1</p>
             <p className="">t</p>
           </div>
         </div>
-        <div className="ml-[600px] h-[200px] text-[150px] flex overflow-hidden font-bold">
+        <div className="lg:ml-[500px]  h-[60px] lg:h-[200px] text-[40px] md:text-[120px] lg:text-[150px] flex overflow-hidden font-bold w-fit">
           <div>
-            <span className="mx-2 relative top-0 inline-block overflow-hidden"><p className="letter2">C</p></span>
-            <span className="mx-2 inline-block overflow-hidden"><p className="letter3">o</p></span>
-            <span className="mx-2 inline-block overflow-hidden"><p className="letter4">m</p></span>
-            <span className="mx-2 inline-block overflow-hidden"><p className="letter6">p</p></span>
-            <span className="mx-2 inline-block overflow-hidden"><p className="letter2">a</p></span>
-            <span className="mx-2 inline-block overflow-hidden"><p className="letter5">n</p></span>
+            <span className="mx-1 md:mx-2 relative top-0 inline-block overflow-hidden"><p className="letter2Sm lg:letter2Lg">C</p></span>
+            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter3Sm lg:letter3Lg">o</p></span>
+            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter4Sm lg:letter4Lg">m</p></span>
+            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter6Sm lg:letter6Lg">p</p></span>
+            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter2Sm lg:letter2Lg">a</p></span>
+            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter5Sm lg:letter5Lg">n</p></span>
           </div>
-          <div className="letter1 inline-block">
+          <div className="letterLg">
             <p className="">1</p>
             <p className="">y</p>
           </div>
         </div>
       </div>
-
-
-      {/* <div className="absolute top-[90%] -translate-y-1/2 text-[20px] md:text-[60px] ml-20 z-10 mx-auto">
-        {herotxt.map((letter, i) => (
-          <div className="overflow-hidden inline-block "><p className="letters clashReg">{letter}&nbsp;&nbsp;</p></div>
-        ))}
-      </div> */}
     </div>
 
   );

@@ -64,95 +64,93 @@ export default function TechStack() {
 
 
     return <div className="grid grid-cols-2 bg-slate-200 h-[80vh] overflow-hidden">
-        <div></div>
+        <div>Hello</div>
         <div>
-            <div className='flex flex-row gap-10'>
+            <div className='flex flex-row-reverse gap-2 md:gap-5 lg:gap-10 md:px-10'>
                 <div className=''>
-                    <div className='stack1 translate-y-[100%] '>
-                        <div className='h-[120px] w-[120px]  bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4 ' src={next.src} alt="" />
+                    <div className='stack1 -translate-y-[100%] '>
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px]  bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4 ' src={next.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4' src={react.src} alt="" />
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4' src={react.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4' src={mongo.src} alt="" />
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4' src={mongo.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4' src={js.src} alt="" />
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4' src={js.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4' src={docker.src} alt="" />
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4' src={docker.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4' src={aws.src} alt="" />
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4' src={aws.src} alt="" />
                         </div>
                     </div>
 
-                    <div className='stack1 translate-y-[100%]'>
-                        <div className='h-[120px] w-[120px]  bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4 ' src={next.src} alt="" />
+                    <div className='stack1 -translate-y-[100%]'>
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px]  bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4 ' src={next.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4' src={react.src} alt="" />
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4' src={react.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4' src={mongo.src} alt="" />
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4' src={mongo.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4' src={js.src} alt="" />
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4' src={js.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4' src={docker.src} alt="" />
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4' src={docker.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4' src={aws.src} alt="" />
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4' src={aws.src} alt="" />
                         </div>
                     </div>
                 </div>
-            <div className=''>
-                <div className='-translate-y-full'>
-                    <div className='stack2 -translate-y-[100%]'>
-                        <div className='h-[120px] w-[120px]  bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
+                <div className='-translate-y-1/2'>
+                    <div className='stack2 translate-y-full'>
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px]  bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
                             <img className='w-[120px] p-8' src={digitalOcean.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
                             <img className='w-[120px] p-8' src={flutter.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
                             <img className='w-[120px] p-8' src={firebase.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
                             <img className='w-[120px] p-8' src={express.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4' src={docker.src} alt="" />
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4' src={docker.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4' src={aws.src} alt="" />
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4' src={aws.src} alt="" />
                         </div>
                     </div>
-                    <div className='stack2 -translate-y-[100%]'>
-                        <div className='h-[120px] w-[120px]  bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
+                    <div className='stack2 translate-y-full'>
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px]  bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
                             <img className='w-[120px] p-8 ' src={digitalOcean.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
                             <img className='w-[120px] p-8' src={flutter.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
                             <img className='w-[120px] p-8' src={firebase.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
                             <img className='w-[120px] p-8' src={express.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4' src={docker.src} alt="" />
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4' src={docker.src} alt="" />
                         </div>
-                        <div className='h-[120px] w-[120px] bg-slate-100 rounded-2xl flex items-center justify-center my-2'>
-                            <img className='w-[120px] p-4' src={aws.src} alt="" />
+                        <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px] bg-slate-100 rounded-3xl flex items-center justify-center my-2'>
+                            <img className='p-4' src={aws.src} alt="" />
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
         </div>
