@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { useEffect, useState, useRef } from "react";
-import { render } from "react-dom";
 import { motion, useAnimation } from "framer-motion";
 import { mix, distance, wrap } from "@popmotion/popcorn";
 import gsap from "gsap";

@@ -1,7 +1,6 @@
 'use client'
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
-import { transform } from "next/dist/build/swc"
 import { useEffect } from "react"
 import loading from "@/public/Infinity.svg"
 
