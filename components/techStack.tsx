@@ -18,17 +18,26 @@ import { useEffect, useState } from 'react'
 export default function TechStack() {
     const [dir, setDir] = useState(false)
 
-    const handleScroll = (event: WheelEvent) => {
-        console.log(event.deltaY)
-        if (event.deltaY < 0) {
-            setDir(false)
-        } else {
-            setDir(true)
+    useEffect(() => {
+        const handleScroll = (event: WheelEvent) => {
+            console.log(event.deltaY);
+            if (event.deltaY < 0) {
+                setDir(false);
+            } else {
+                setDir(true);
+            }
+        };
+
+        if (typeof window !== 'undefined') {
+            window.addEventListener('wheel', handleScroll);
         }
-    };
 
-    window.addEventListener('wheel', handleScroll);
-
+        return () => {
+            if (typeof window !== 'undefined') {
+                window.removeEventListener('wheel', handleScroll);
+            }
+        };
+    }, []);
     useEffect(() => {
         if (dir) {
             gsap.to('.stack1', {
