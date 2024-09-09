@@ -7,20 +7,19 @@ import Mobile from "@/components/mobile";
 import Portfolio from "@/components/portfolio";
 import GsapTimelineExample from "@/components/reactTime";
 import TechStack from "@/components/techStack";
-import gsap from "gsap";
+
 
 export default function Home() {
   
-
   return (
-    <main className="mori">
+    <main className="mori" id="main">
       {/* <GsapTimelineExample /> */}
       <Loader/>
       <Hero/>
-      <Mobile />
+      <Mobile/>
       <TechStack/>
-      <Portfolio />
-      <Footer />
+      <Portfolio/>
+      <Footer/>
     </main>
   );
 }

@@ -10,14 +10,12 @@ export default function Loader() {
 
     useEffect(() => {
         const tl = gsap.timeline()
-        
         tl.to('.text', {
             delay: 3,
             duration: 0.5,
             y: "-100%",
         })
         tl.to('.main', {
-            delay: 1,
             duration: 2,
             height: 0,
             ease: "Expo.easeInOut"
@@ -25,7 +23,7 @@ export default function Loader() {
         tl.to('.greenDiv', {
             height: "100%",
             duration: 2,
-            delay: -2,
+            delay: -2.4,
             ease: "Expo.easeInOut",
         })
     }, [])

@@ -75,7 +75,7 @@ export default function TechStack() {
     return <div className="grid grid-cols-2 bg-slate-200 h-[80vh] overflow-hidden">
         <div>Hello</div>
         <div>
-            <div className='flex flex-row-reverse gap-2 md:gap-5 lg:gap-10 md:px-10'>
+            <div className='flex flex-row-reverse gap-2 md:gap-5 lg:gap-10 px-2 md:px-20 lg:px-32'>
                 <div className=''>
                     <div className='stack1 -translate-y-[100%] '>
                         <div className='h-[90px] w-[90px] lg:h-[120px] lg:w-[120px]  bg-slate-100 rounded-3xl flex items-center justify-center my-2'>

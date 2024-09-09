@@ -10,9 +10,9 @@ const GsapTimelineExample = () => {
     const tl = gsap.timeline({ defaults: { duration: 1, ease: "power2.out" } });
 
     // Create a timeline with sequential animations
-    tl.to(box1Ref.current, { x: 100, opacity: 1 })
-      .to(box2Ref.current, { x: 100, opacity: 1 }, "-=0.5")  // "-=0.5" means this animation overlaps the previous one by 0.5s
-      .to(box3Ref.current, { x: 100, opacity: 1 });
+    tl.from(box1Ref.current, { x: 100, opacity: 1 })
+      .from(box2Ref.current, { x: 100, opacity: 1 }, "-=0.5")  // "-=0.5" means this animation overlaps the previous one by 0.5s
+      .from(box3Ref.current, { x: 100, opacity: 1 });
 
     // You can chain more animations to the timeline as needed
   }, []);
