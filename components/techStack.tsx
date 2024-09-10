@@ -75,8 +75,10 @@ export default function TechStack() {
     return <div className="grid grid-cols-2 justify-center items-center h-[80vh] bg-[#1C1E21] overflow-hidden">
         <div className=' mx-auto w-[90vw] lg:w-[40vw] md:w-[40vw]'>
             <div className='p-5 text-white'>
-                <h1 className="text-[20px] md:text-[30px] lg:text-[48px] font-bold">Build Your Vision</h1>
-                <p className='text-[12px] md:text-[15px] lg:text-[15px] font-extralight md:leading-7 lg:leading-10'>In today&apos;s fast-paced digital world, having a robust online presence is crucial. Whether you need a sleek, responsive website or a powerful app tailored to your unique needs, our agency is here to turn your vision into reality. We specialize in creating custom websites and innovative solutions that elevate your brand, engage your audience, and drive success. Let us help you build the digital experience your business deserves.</p>
+                <h1 className="text-[20px] md:text-[30px] lg:text-[48px] font-bold">Tech We Use</h1>
+                <p className='mt-10 text-[12px] md:text-[15px] lg:text-[18px] font-thin md:leading-7 lg:leading-10'>Harnessing the latest technologies and cutting-edge AI, we bring your vision to life with innovative solutions. Let us turn your ideas into reality with our tech wizardry!
+                    <br></br><br></br> Whether it&apos;s web, app, or AI, you can count on us for flawless delivery and exceptional results.
+                </p>
             </div>
         </div>
         <div className='flex flex-row-reverse gap-2 md:gap-5 lg:gap-10 px-2 md:px-20 lg:px-32 overflow-hidden'>

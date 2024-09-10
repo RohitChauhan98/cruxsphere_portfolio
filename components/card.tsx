@@ -63,7 +63,7 @@ const CardP: React.FC<CardProps> = ({ title, description, subtitle, src, link, u
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div ref={container} onClick={() => {window.open(link)}} className="h-screen flex items-center justify-center sticky top-0">
+    <div ref={container} onClick={() => {window.open(link)}} className="h-screen flex items-center justify-center sticky top-0 cursor-none">
       <motion.div
         style={{
           // backgroundColor: '#151515',

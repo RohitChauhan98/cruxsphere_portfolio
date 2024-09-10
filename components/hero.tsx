@@ -14,8 +14,6 @@ import {
   useAnimationLoop
 } from "./utils";
 import "./style.css";
-import { url } from "inspector";
-import test from "./../public/test.svg"
 
 
 const ImagePlaceholder = ({ url, position }: { url: any, position: any }) => {
@@ -44,9 +42,10 @@ const ImagePlaceholder = ({ url, position }: { url: any, position: any }) => {
       animate={controls}
       transformTemplate={center}
       style={{ borderRadius: '10px', overflow: "hidden", ...style }}
-      className="placeholder"
+      className="placeholder rounded-full"
     >
-      <iframe src="https://giphy.com/embed/MMy3I2TwBtbMc" width="480" height="480" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
+      <img src='https://i.giphy.com/sWFYgYFjHGugleQdO7.webp'/>
+      {/* <iframe src="https://giphy.com/embed/XDO1spNv8bAHVcjCnj" width="480" height="480" frameBorder="0" className="giphy-embed" allowFullScreen></iframe> */}
     </motion.div>
 
   );
@@ -241,7 +240,7 @@ const Hero = ({ distanceThreshold = 140 }) => {
           </div>
         </div>
       </div>
-      <div className="absolute md:bottom-32 md:left-20 bottom-10 text-center md:text-left text-sm md:text-base font-thin left-[50%] -translate-x-1/2 md:translate-x-0">We are the<br></br>development partners for<br></br>Founders and Agency Owners</div>
+      <div className="absolute md:bottom-32 md:left-20 bottom-10 text-center md:text-left text-sm md:text-base font-thin left-[50%] -translate-x-1/2 md:translate-x-0">Software Development<br></br>Partner for Startup<br></br>Founders and Agency Owners</div>
     </div>
 
   );

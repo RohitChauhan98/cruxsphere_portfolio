@@ -29,7 +29,7 @@ export default function Loader() {
     }, [])
 
     return <div className="absolute z-50">
-        <div className="h-[100vh] w-[100vw] bg-[#151515] text-white main  overflow-hidden">
+        <div className="h-[100vh] w-[100vw] bg-[#1C1E21] text-white main  overflow-hidden">
             <div className="relative top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 inline-block ">
                 <div className="flex justify-center overflow-hidden text-lg md:text-2xl lg:text-3xl">
                     <p className="text inline-block">Software</p>

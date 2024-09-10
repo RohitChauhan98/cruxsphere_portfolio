@@ -34,7 +34,8 @@ export default function Footer() {
         <div className="relative md:w-[40vw] mx-auto flex mt-[100px] py-[3vw] border-b ">
             <h1 className="text-[3px] md:text-[5vw] text-white  mori font-extrabold inline-block">Let&apos;s work together</h1>
             <div
-                className="absolute top-[100%] right-[10%] w-[100px] h-[100px] md:w-[180px] md:h-[180px] bg-[#445AE9] rounded-full transition-transform duration-300 ease-in-out text-white flex items-center justify-center text-lg clashReg"
+                onClick={()=>{window.open('https://calendly.com/tusharbisht0409/book-a-meeting')}}
+                className="cursor-pointer absolute top-[100%] right-[10%] w-[100px] h-[100px] md:w-[180px] md:h-[180px] bg-[#445AE9] rounded-full transition-transform duration-300 ease-in-out text-white flex items-center justify-center text-lg clashReg"
                 style={{ transform: transformStyle }}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -44,11 +45,11 @@ export default function Footer() {
         <div className="flex-grow"></div>
         <div className="text-white lg:flex w-full justify-between lg:px-20">
             <div className="flex flex-col md:flex-row items-center justify-center">
-                <div className="flex gap-2 py-3 items-center">
+                <div className="cursor-pointer flex gap-2 py-3 items-center">
                     <img className="h-5" src={email.src} alt="" />
                     <p>contact@cruxsphere.com</p>
                 </div>
-                <div className="flex gap-2 py-3 items-center">
+                <div className="cursor-pointer ml-8 flex gap-2 py-3 items-center">
                     <img className="h-5" src={call.src} alt="" />
                     <p>+15038820512</p>
                 </div>
@@ -60,13 +61,11 @@ export default function Footer() {
                     <p className="tracking-[4px] text-center">SE Clackamas, OR 97015, USA</p>
                 </div>
                 <div className="flex justify-center py-3 gap-5">
-                    <img className="h-8" src={linkedIn.src} alt="" />
-                    <img className="h-8" src={whatsapp.src} alt="" />
+                    <img onClick={()=>{window.open('https://wa.link/6j1ghq')}} className="cursor-pointer h-8" src={linkedIn.src} alt="" />
+                    <img onClick={()=>{window.open('https://www.linkedin.com/company/crux-sphere')}} className="cursor-pointer h-8" src={whatsapp.src} alt="" />
                 </div>
             </div>
         </div>
-        <p className="text-white text-center py-10">© 2021 Crux</p>
+        <p className="text-white text-center py-10">© 2024 Crux Sphere</p>
     </div>
 }
-
-//phone number email linkedin whatsapp
