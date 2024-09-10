@@ -29,8 +29,9 @@ const CardP: React.FC<CardProps> = ({ title, description, subtitle, src, url, co
     setPosition({ x: event.clientX, y: event.clientY });
   };
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = (event: any) => {
     setIsInside(true);
+    setPosition({ x: event.clientX, y: event.clientY });
   };
 
   const handleMouseLeave = () => {
@@ -63,8 +64,10 @@ const CardP: React.FC<CardProps> = ({ title, description, subtitle, src, url, co
     <div ref={container} className="h-screen flex items-center justify-center sticky top-0">
       <motion.div
         style={{
-          background: "rgb(174,255,247)",
-          backgroundImage: "linear-gradient(90deg, rgba(174,255,247,1) 0%, rgba(255,134,126,1) 50%, rgba(219,255,190,1) 100%)", scale, top: `calc(-5vh + ${i * 25}px)`
+          backgroundColor: '#151515',
+          // background: "rgb(174,255,247)",
+          // backgroundImage: "linear-gradient(90deg, rgba(174,255,247,1) 0%, rgba(255,134,126,1) 50%, rgba(219,255,190,1) 100%)",
+          scale, top: `calc(-5vh + ${i * 25}px)`
         }}
         className="bg-cover bg-center bg-no-repeat flex flex-col relative top-[-25%] h-full md:h-[80vh] lg:h-[90vh] w-[100vw] rounded-[5px] p-[20px] md:p-[30px] lg:p-[50px] origin-top"
       >
@@ -73,7 +76,7 @@ const CardP: React.FC<CardProps> = ({ title, description, subtitle, src, url, co
           onMouseLeave={handleMouseLeave}>
           {isInside && (
             <div
-              className="absolute bg-opacity-50 text-black w-16 h-16 flex justify-center items-center p-2 rounded-full border border-black transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+              className="absolute bg-white text-black font-extrabold flex justify-center items-center py-2 px-8 rounded-full border border-white transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
               style={{
                 left: `${position.x}px`,
                 top: `${position.y}px`,
@@ -82,7 +85,7 @@ const CardP: React.FC<CardProps> = ({ title, description, subtitle, src, url, co
               Open
             </div>
           )}
-          <div className="lg:w-[40%] relative top-[10%] md:pl-[40px]">
+          <div className="lg:w-[40%] relative top-[10%] md:pl-[40px] text-white">
             <div className=' lg:w-[35vw]'>
               <h2 className="m-0 text-[25px] md:text-[30px] lg:text-[40px] tracking-[10px]">{title}</h2>
               <h2 className="m-0 text-[18px] md:text-[20px] lg:text-[24px]">{subtitle}</h2>

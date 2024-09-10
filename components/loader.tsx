@@ -33,7 +33,7 @@ export default function Loader() {
             <div className="relative top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 inline-block text-3xl overflow-hidden"> <p className="text">Hello!</p> </div>
             <img className="absolute left-[50%] -translate-x-1/2 bottom-10 h-14" src={loading.src} alt="" />
         </div>
-        <div className="absolute bottom-0 h-0 w-[100vw] bg-green-500 greenDiv">
+        <div className="absolute bottom-0 h-0 w-[100vw] bg-white greenDiv">
 
         </div>
     </div>

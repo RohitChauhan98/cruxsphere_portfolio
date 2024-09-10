@@ -46,7 +46,7 @@ const ImagePlaceholder = ({ url, position }: { url: any, position: any }) => {
       style={{ borderRadius: '10px', overflow: "hidden", ...style }}
       className="placeholder"
     >
-      <iframe src="https://giphy.com/embed/sWFYgYFjHGugleQdO7" width="480" height="480" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
+      <iframe src="https://giphy.com/embed/MMy3I2TwBtbMc" width="480" height="480" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
     </motion.div>
 
   );
@@ -241,6 +241,7 @@ const Hero = ({ distanceThreshold = 140 }) => {
           </div>
         </div>
       </div>
+      <div className="absolute bottom-32 left-20">We are the<br></br>development partners for<br></br>Founders and Agency Owners</div>
     </div>
 
   );
