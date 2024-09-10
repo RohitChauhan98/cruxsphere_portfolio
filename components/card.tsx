@@ -19,9 +19,11 @@ interface CardProps {
   progress: any;
   range: any;
   targetScale: any;
+  gradient: any;
+  link: any
 }
 
-const CardP: React.FC<CardProps> = ({ title, description, subtitle, src, url, color, i, progress, range, targetScale }) => {
+const CardP: React.FC<CardProps> = ({ title, description, subtitle, src, link, url, color, gradient, i, progress, range, targetScale }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isInside, setIsInside] = useState(false);
 
@@ -61,12 +63,12 @@ const CardP: React.FC<CardProps> = ({ title, description, subtitle, src, url, co
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div ref={container} className="h-screen flex items-center justify-center sticky top-0">
+    <div ref={container} onClick={() => {window.open(link)}} className="h-screen flex items-center justify-center sticky top-0">
       <motion.div
         style={{
-          backgroundColor: '#151515',
+          // backgroundColor: '#151515',
           // background: "rgb(174,255,247)",
-          // backgroundImage: "linear-gradient(90deg, rgba(174,255,247,1) 0%, rgba(255,134,126,1) 50%, rgba(219,255,190,1) 100%)",
+          backgroundImage: gradient,
           scale, top: `calc(-5vh + ${i * 25}px)`
         }}
         className="bg-cover bg-center bg-no-repeat flex flex-col relative top-[-25%] h-full md:h-[80vh] lg:h-[90vh] w-[100vw] rounded-[5px] p-[20px] md:p-[30px] lg:p-[50px] origin-top"
@@ -76,8 +78,8 @@ const CardP: React.FC<CardProps> = ({ title, description, subtitle, src, url, co
           onMouseLeave={handleMouseLeave}>
           {isInside && (
             <div
-              className="absolute bg-white text-black font-extrabold flex justify-center items-center py-2 px-8 rounded-full border border-white transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-              style={{
+              className="absolute h-16 w-16 font-thin backdrop-invert text-white flex justify-center items-center py-2 px-8 rounded-full transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+              style={{ zIndex: 999,
                 left: `${position.x}px`,
                 top: `${position.y}px`,
               }}
@@ -85,7 +87,7 @@ const CardP: React.FC<CardProps> = ({ title, description, subtitle, src, url, co
               Open
             </div>
           )}
-          <div className="lg:w-[40%] relative top-[10%] md:pl-[40px] text-white">
+          <div className="lg:w-[40%] relative md:pl-[40px] text-white px-5">
             <div className=' lg:w-[35vw]'>
               <h2 className="m-0 text-[25px] md:text-[30px] lg:text-[40px] tracking-[10px]">{title}</h2>
               <h2 className="m-0 text-[18px] md:text-[20px] lg:text-[24px]">{subtitle}</h2>

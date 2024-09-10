@@ -194,7 +194,7 @@ const Hero = ({ distanceThreshold = 140 }) => {
 
   return (
     <div
-      className="flex flex-col h-[100vh] w-[100vw] bg-[#151515] text-white"
+      className="flex flex-col h-[100vh] w-[100vw] bg-[#1C1E21] text-white"
       onMouseMove={e => (mouseInfo.now = { x: e.pageX, y: e.pageY })}
     >
       {colors.map((color, i) => (
@@ -204,44 +204,44 @@ const Hero = ({ distanceThreshold = 140 }) => {
           key={color}
         />
       ))}
-      <nav className="mx-20 py-5 flex justify-between">
-        <p className="tracking-widest text-lg font-bold">CRUX</p>
-        <div>
+      <nav className="mx-20 py-8 md:py-10 lg:py-12 md:flex justify-between">
+        <p className="tracking-[8px] text-lg font-bold text-center">CRUX</p>
+        <div className="hidden md:block">
           <ul className="flex gap-10">
-            <li className="font-light hover:scale-110 duration-300">Our Work</li>
-            <li className="font-light hover:scale-110 duration-300">Contact</li>
+            <li className="font-light hover:scale-110 duration-300 underline underline-offset-4">Our Work</li>
+            <li className="font-light hover:scale-110 duration-300 underline underline-offset-4">Contact</li>
           </ul>
         </div>
       </nav>
-      <div className="relative top-[40%] left-[10%] -translate-y-1/2 w-fit">
-        <div className="h-[60px] md:h-[150px] lg:h-[200px] text-[8vw] flex overflow-hidden font-bold w-fit">
+      <div className="relative top-[35%] md:left-[10%] -translate-y-1/2 w-fit mx-auto md:m-0">
+        <div className="h-[60px] md:h-[150px] lg:h-[200px] text-[9vw] overflow-hidden font-bold w-fit mx-auto md:m-0">
           <div>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter2Sm">D</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter3Sm">e</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter5Sm">v</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter2Sm">e</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter6Sm">l</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter5Sm">o</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter4Sm">p</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter2Sm">m</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter3Sm">e</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter6Sm">n</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter2Sm">t</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter2Sm">D</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter3Sm">e</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter5Sm">v</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter2Sm">e</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter6Sm">l</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter5Sm">o</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter4Sm">p</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter2Sm">m</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter3Sm">e</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter6Sm">n</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter2Sm">t</p></span>
           </div>
         </div>
-        <div className="lg:ml-[500px] h-[60px] md:h-[150px] lg:h-[200px] text-[8vw] flex overflow-hidden font-bold w-fit">
+        <div className="lg:ml-[500px] h-[60px] md:h-[150px] lg:h-[200px] text-[9vw] overflow-hidden font-bold w-fit mx-auto md:m-0">
           <div>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter2Sm">C</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter3Sm">o</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter4Sm">m</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter6Sm">p</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter2Sm">a</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter5Sm">n</p></span>
-            <span className="mx-1 md:mx-2 inline-block overflow-hidden"><p className="letter2Sm">y</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter2Sm">C</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter3Sm">o</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter4Sm">m</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter6Sm">p</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter2Sm">a</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter5Sm">n</p></span>
+            <span className=" inline-block overflow-hidden"><p className="letter2Sm">y</p></span>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-32 left-20">We are the<br></br>development partners for<br></br>Founders and Agency Owners</div>
+      <div className="absolute md:bottom-32 md:left-20 bottom-10 text-center md:text-left text-sm md:text-base font-thin left-[50%] -translate-x-1/2 md:translate-x-0">We are the<br></br>development partners for<br></br>Founders and Agency Owners</div>
     </div>
 
   );

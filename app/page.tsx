@@ -10,16 +10,18 @@ import TechStack from "@/components/techStack";
 
 
 export default function Home() {
-  
+
   return (
     <main className="mori" id="main">
       {/* <GsapTimelineExample /> */}
-      <Loader/>
-      <Hero/>
-      <Mobile/>
-      <TechStack/>
-      <Portfolio/>
-      <Footer/>
+      <Loader />
+      <Hero />
+      <Mobile />
+      <div className="hidden md:block">
+        <TechStack />
+      </div>
+      <Portfolio />
+      <Footer />
     </main>
   );
 }
